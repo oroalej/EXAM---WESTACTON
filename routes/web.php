@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', static function() {
-  return redirect()->route('products.index');
-});
+Route::get('', 'HomeController@index');
 
 Route::group([ 'prefix' => 'orders', 'as' => 'order.' ], static function () {
   Route::get('', 'OrderController@index')->name('index');
